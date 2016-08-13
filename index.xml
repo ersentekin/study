@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>study</title>
-    <link>https://ersentekin.github.io/</link>
+    <link>http://ersentekin.github.io/study/</link>
     <description>Recent content on study</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Aug 2016 20:44:09 +0200</lastBuildDate>
-    <atom:link href="https://ersentekin.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://ersentekin.github.io/study/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>hello</title>
-      <link>https://ersentekin.github.io/post/hello/</link>
+      <link>http://ersentekin.github.io/study/post/hello/</link>
       <pubDate>Sat, 13 Aug 2016 20:44:09 +0200</pubDate>
       
-      <guid>https://ersentekin.github.io/post/hello/</guid>
+      <guid>http://ersentekin.github.io/study/post/hello/</guid>
       <description></description>
     </item>
     
     <item>
       <title>c functions</title>
-      <link>https://ersentekin.github.io/post/c-functions/</link>
+      <link>http://ersentekin.github.io/study/post/c-functions/</link>
       <pubDate>Thu, 11 Aug 2016 20:42:34 +0200</pubDate>
       
-      <guid>https://ersentekin.github.io/post/c-functions/</guid>
+      <guid>http://ersentekin.github.io/study/post/c-functions/</guid>
       <description>&lt;p&gt;###C-functions&lt;/p&gt;
 
 &lt;p&gt;simple example :&lt;/p&gt;
