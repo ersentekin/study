@@ -1,0 +1,199 @@
+<html lang="en">
+<head>
+
+  
+  <meta charset="utf-8">
+  <title>c functions</title>
+  <meta name="description" content="c functions">
+  <meta name="author" content="">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://ersentekin.github.io/study/css/fonts.css">
+  
+  
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+  <link rel="stylesheet" href="https://ersentekin.github.io/study/css/custom.css">
+
+  
+  
+  <link rel="stylesheet" href="https://ersentekin.github.io/study/highlight/styles/default.css">
+  
+  <script src="https://ersentekin.github.io/study/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+<body>
+
+
+<div class="header pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="desktop pure-menu pure-menu-horizontal nav-menu">
+            
+            <a href="https://ersentekin.github.io/study/" class="site-title pure-menu-heading">study</a>
+            <ul class="pure-menu-list">
+                
+                <li class="pure-menu-item">
+                    <a href="https://ersentekin.github.io/study/about/" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mobile pure-menu nav-menu">
+            <a href="/" class="pure-menu-heading" id="toggle-home">study</a>
+            <a href="#" id="toggle-btn">&#9776;</a>
+            <ul class="pure-menu-list" id="toggle-content" style="display:none;">
+                
+                
+                <li class="pure-menu-item">
+                    <a href="https://ersentekin.github.io/study/about" class="pure-menu-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<div class="pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+	<div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="post">
+
+            <div class="post-title">
+                <p class="footnote">
+                    <time class="">2016-08-11</time>
+		            
+                    
+                    
+
+                    
+
+                    
+                </p>
+                <h1>c functions</h1>
+            </div>
+
+            <div class="post-content">
+                <p>###C-functions</p>
+
+<p>simple example :</p>
+
+<pre><code class="language-objective-c">void myName (NSString *name)
+{
+    NSLog(@&quot;hello : %@&quot;, name);
+}
+</code></pre>
+
+<p>if you are <strong>NOT</strong> inside <code>@implementation</code> block, compiler will complain about that could not see its declaration with following compiler error:</p>
+
+<blockquote>
+<p>implicit declaration of function X is invalid in C99</p>
+</blockquote>
+
+<p>so you should put complete definition above your function call line <strong>OR</strong> declare it above call line and implement it below call line.</p>
+
+<ul>
+<li>If you put <code>static</code> keyword like this:</li>
+</ul>
+
+<pre><code class="language-objective-c">static void myName (NSString *name)
+{
+    NSLog(@&quot;hello : %@&quot;, name);
+}
+</code></pre>
+
+<p>it will limit the scope of the function to the current file. If <strong>NOT</strong> static, then it will be global WITHOUT importing the file of the function, all over the project.</p>
+
+<ul>
+<li>if you make a local variable as <code>static</code> :</li>
+</ul>
+
+<pre><code class="language-objective-c">static void myName (NSString *name)
+{
+	static int counter = 0;
+	counter++;
+    NSLog(@&quot;hello : %@ and count : %d&quot;, name, counter);
+}
+</code></pre>
+
+<p>it will REMEMBER its value when you call function, then count like 1, 2, ,3&hellip;</p>
+
+<ul>
+<li><strong><code>inline</code></strong> functions:</li>
+</ul>
+
+<pre><code class="language-objective-c">static inline void myName (NSString *name)
+{
+    NSLog(@&quot;hello : %@&quot;, name);
+}
+</code></pre>
+
+<p><code>inline</code> says to compiler that, put this function code block to the related function called line (inline ;)) and thereby saving the overhead of a function call.</p>
+
+<ul>
+<li><strong><code>NS_INLINE</code></strong> macro means <code>__attribute__((always_inline))</code> compiler directive. stronger than normal <code>inline</code>.</li>
+</ul>
+
+            </div>
+        </div>
+	</div>
+    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">:</li>
+
+                
+
+                
+
+                
+
+                
+
+                
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
+	  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
+
+<script src="https://ersentekin.github.io/study/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://ersentekin.github.io/study/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
+  });
+  $(window).resize(function(){
+    if(window.innerWidth > 768) {
+      $(".desktop").removeAttr("style");
+    }
+  });
+</script>
+
+</body>
+</html>
+

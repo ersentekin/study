@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on study</title>
+    <link>https://ersentekin.github.io/study/post/</link>
+    <description>Recent content in Posts on study</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Aug 2016 20:44:09 +0200</lastBuildDate>
+    <atom:link href="https://ersentekin.github.io/study/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>hello</title>
+      <link>https://ersentekin.github.io/study/post/hello/</link>
+      <pubDate>Sat, 13 Aug 2016 20:44:09 +0200</pubDate>
+      
+      <guid>https://ersentekin.github.io/study/post/hello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c functions</title>
+      <link>https://ersentekin.github.io/study/post/c-functions/</link>
+      <pubDate>Thu, 11 Aug 2016 20:42:34 +0200</pubDate>
+      
+      <guid>https://ersentekin.github.io/study/post/c-functions/</guid>
+      <description>&lt;p&gt;###C-functions&lt;/p&gt;
+
+&lt;p&gt;simple example :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;void myName (NSString *name)
+{
+    NSLog(@&amp;quot;hello : %@&amp;quot;, name);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you are &lt;strong&gt;NOT&lt;/strong&gt; inside &lt;code&gt;@implementation&lt;/code&gt; block, compiler will complain about that could not see its declaration with following compiler error:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;implicit declaration of function X is invalid in C99&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;so you should put complete definition above your function call line &lt;strong&gt;OR&lt;/strong&gt; declare it above call line and implement it below call line.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If you put &lt;code&gt;static&lt;/code&gt; keyword like this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;static void myName (NSString *name)
+{
+    NSLog(@&amp;quot;hello : %@&amp;quot;, name);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;it will limit the scope of the function to the current file. If &lt;strong&gt;NOT&lt;/strong&gt; static, then it will be global WITHOUT importing the file of the function, all over the project.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;if you make a local variable as &lt;code&gt;static&lt;/code&gt; :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;static void myName (NSString *name)
+{
+	static int counter = 0;
+	counter++;
+    NSLog(@&amp;quot;hello : %@ and count : %d&amp;quot;, name, counter);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;it will REMEMBER its value when you call function, then count like 1, 2, ,3&amp;hellip;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;inline&lt;/code&gt;&lt;/strong&gt; functions:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;static inline void myName (NSString *name)
+{
+    NSLog(@&amp;quot;hello : %@&amp;quot;, name);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;inline&lt;/code&gt; says to compiler that, put this function code block to the related function called line (inline ;)) and thereby saving the overhead of a function call.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;NS_INLINE&lt;/code&gt;&lt;/strong&gt; macro means &lt;code&gt;__attribute__((always_inline))&lt;/code&gt; compiler directive. stronger than normal &lt;code&gt;inline&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

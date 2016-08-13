@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://ersentekin.github.io/</loc>
+    <lastmod>2016-08-13T20:44:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ersentekin.github.io/post/hello/</loc>
+    <lastmod>2016-08-13T20:44:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://ersentekin.github.io/post/c-functions/</loc>
+    <lastmod>2016-08-11T20:42:34+02:00</lastmod>
+  </url>
+  
+</urlset>
